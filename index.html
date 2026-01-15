@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri Internship & Skill Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🌾 Agri Skill Hub</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#internships">Internships</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#mentors">Mentors</a></li>
+                <li><button class="login-btn" onclick="showLoginModal()">Login</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Agri Internship & Skill Hub 🎓</h1>
+            <p>Your Gateway to Agricultural Excellence</p>
+            <button class="cta-btn" onclick="scrollToSection('internships')">Explore Internships</button>
+        </div>
+    </section>
+
+    <!-- Internship Listings -->
+    <section id="internships" class="section">
+        <div class="container">
+            <h2>💼 Internship Listings</h2>
+            <div class="filters">
+                <input type="text" id="searchInput" placeholder="Search internships...">
+                <select id="filterType">
+                    <option value="">All Types</option>
+                    <option value="government">Government</option>
+                    <option value="private">Private</option>
+                </select>
+            </div>
+            <div class="grid" id="internshipGrid">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Recommendations -->
+    <section id="courses" class="section alt">
+        <div class="container">
+            <h2>📚 Course Recommendations</h2>
+            <div class="grid" id="courseGrid">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="section">
+        <div class="container">
+            <h2>🛠️ Tools & Features</h2>
+            <div class="tools-grid">
+                <div class="tool-card" onclick="showModal('resume-builder')">
+                    <h3>📄 Resume Builder</h3>
+                    <p>Create professional resumes tailored for agriculture roles</p>
+                </div>
+                <div class="tool-card" onclick="showModal('project-showcase')">
+                    <h3>🎨 Project Showcase</h3>
+                    <p>Display your agricultural projects and research</p>
+                </div>
+                <div class="tool-card" onclick="showModal('skill-analyzer')">
+                    <h3>📊 Skill Gap Analyzer</h3>
+                    <p>Identify skills needed vs. what you have</p>
+                </div>
+                <div class="tool-card" onclick="showModal('internship-tracker')">
+                    <h3>📈 Internship Tracker</h3>
+                    <p>Track your internship applications and progress</p>
+                </div>
+                <div class="tool-card" onclick="showModal('certificate-verify')">
+                    <h3>✅ Certificate Verification</h3>
+                    <p>Upload and verify your certifications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mentors Section -->
+    <section id="mentors" class="section alt">
+        <div class="container">
+            <h2>👥 Mentor Connect</h2>
+            <div class="grid" id="mentorGrid">
+                <!-- Dynamic content -->
+            </div>
+            <button class="cta-btn" onclick="showModal('request-mentor')">Request a Mentor</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Agri Internship & Skill Hub. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy</a> | <a href="#">Terms</a> | <a href="#">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="modal-btn">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" onclick="alert('Sign up feature coming soon!')">Sign up here</a></p>
+        </div>
+    </div>
+
+    <!-- Generic Modal -->
+    <div id="genericModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
